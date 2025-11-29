@@ -1,20 +1,67 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 SkillChain – AI-Powered Resume Verification System
 
-# Run and deploy your AI Studio app
+SkillChain is an *AI-driven resume verification system* that automatically validates a candidate’s *skills, certificates, education, and employment history* using *Machine Learning, NLP, and (future) Blockchain integration*.
 
-This contains everything you need to run your app locally.
+This repository currently contains the *frontend app, built with **TypeScript + React + Vite, configured to talk to a Gemini-powered backend via the **Google AI Studio* setup.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1tBDh_vLcKXiC78YBqNlN7MlhQSZESRGn
+---
 
-## Run Locally
+## 🧩 What This App Does (Current Version)
 
-**Prerequisites:**  Node.js
+- Provides a *web UI* for the SkillChain concept.
+- Connects to a *Gemini API key* (via GEMINI_API_KEY) to power AI features.
+- Acts as the *client* for:
+  - Resume input / interaction  
+  - Displaying AI responses / verification information  
+- Serves as the starting point for a full *AI + Blockchain resume verification platform*.
 
+> The repo was generated from google-gemini/aistudio-repository-template, then adapted for SkillChain. :contentReference[oaicite:1]{index=1}
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 🧠 Vision / Concept
+
+SkillChain aims to:
+
+- Parse resumes using *NLP*  
+- Validate skills, projects, and experience using *AI models*  
+- Authenticate certificates (via *OCR + metadata checks*)  
+- Store verified credentials on *Blockchain* for tamper-proof proof of skills  
+- Provide *recruiters* with:
+  - A *trust score* for each candidate  
+  - A *verification report* of claims  
+
+The current repo is the *frontend foundation* for this system.
+
+---
+
+## 🛠 Tech Stack
+
+- *Language*: TypeScript  
+- *Framework*: React  
+- *Build Tool*: Vite  
+- *Runtime*: Node.js (for local dev tooling)  
+- *AI Integration*: Gemini API (via GEMINI_API_KEY)  
+
+You can see from GitHub that the codebase is almost entirely *TypeScript + HTML*. :contentReference[oaicite:2]{index=2}  
+
+---
+
+## 📁 Project Structure
+
+At the root of the repo:
+
+```bash
+SkillChain-Ai-powered-resume-verification-system/
+│
+├── components/        # Reusable React components
+├── services/          # API / helper services (Gemini, etc.)
+├── App.tsx            # Root React component
+├── index.tsx          # App entry point (React + Vite)
+├── index.html         # Base HTML template
+├── types.ts           # Shared TypeScript types/interfaces
+├── vite.config.ts     # Vite configuration
+├── metadata.json      # AI Studio / template metadata
+├── package.json       # Project dependencies & scripts
+├── tsconfig.json      # TypeScript configuration
+└── README.md          # Project documentation (this file)
